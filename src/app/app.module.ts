@@ -7,11 +7,17 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AtomLogoComponent } from './components/atoms/atom-logo.component';
+import { AtomNavbarComponent } from './components/atoms/atom-navbar.component';
+import { OrganismHeaderComponent } from './components/organisms/organism-header.component';
+import { PageHomeComponent } from './components/pages/page-home/page-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AtomLogoComponent
+    AtomLogoComponent,
+    AtomNavbarComponent,
+    OrganismHeaderComponent,
+    PageHomeComponent
   ],
   imports: [
     BrowserModule,

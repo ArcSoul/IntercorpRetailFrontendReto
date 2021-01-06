@@ -1,6 +1,9 @@
+// @ts-ignore
 import logoBusiness from '../../assets/images/logo.png';
 
 type ThemeColor = 'primary' | 'secondary' | 'tertiary';
+
+
 
 class ConfigAppModel {
   businessName!: string;
