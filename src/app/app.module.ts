@@ -10,6 +10,7 @@ import { AtomLogoComponent } from './components/atoms/atom-logo.component';
 import { AtomNavbarComponent } from './components/atoms/atom-navbar.component';
 import { OrganismHeaderComponent } from './components/organisms/organism-header.component';
 import { PageHomeComponent } from './components/pages/page-home/page-home.component';
+import { AtomTitleTextComponent } from './components/atoms/atom-title-text.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PageHomeComponent } from './components/pages/page-home/page-home.compon
     AtomLogoComponent,
     AtomNavbarComponent,
     OrganismHeaderComponent,
-    PageHomeComponent
+    PageHomeComponent,
+    AtomTitleTextComponent
   ],
   imports: [
     BrowserModule,

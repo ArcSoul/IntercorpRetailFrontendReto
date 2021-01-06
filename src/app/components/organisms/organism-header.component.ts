@@ -4,7 +4,7 @@ import { ConfigApp } from '../../config/ConfigApp';
 @Component({
   selector: 'app-organism-header',
   template: `
-    <nav class="navbar navbar-expand-lg navbar-dark" [ngStyle]="{'backgroundColor': background}">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" [ngStyle]="{'backgroundColor': background}">
       <div class="container-fluid">
         <a atom-logo class="navbar-brand" [routerLink]="['/']"></a>
         <button
