@@ -1,8 +1,12 @@
-<section class="vw-100 vh-100 d-flex justify-content-center align-items-center">
-  <app-atom-title-text [themeColor]="'primary'">
-    {{titleProcess}}
-  </app-atom-title-text>
-  <app-organism-table-primary
-
-  ></app-organism-table-primary>
+<section class="vw-100 vh-100 d-flex justify-content-center align-items-center flex-wrap">
+  <div class="container">
+    <app-atom-title-text [themeColor]="'primary'" class="w-100">
+      {{titleProcess}}
+    </app-atom-title-text>
+    <app-organism-table-primary
+      [headerData]="headerData"
+      [activateTools]="false"
+      [tableData]="tableData"
+    ></app-organism-table-primary>
+  </div>
 </section>

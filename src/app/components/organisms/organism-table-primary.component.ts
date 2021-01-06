@@ -6,6 +6,7 @@ import {ButtonModel} from '../../models/button-model';
 @Component({
   selector: 'app-organism-table-primary',
   template: `
+    <app-molecule-table-tools *ngIf="activateTools" [buttons]="buttons"></app-molecule-table-tools>
     <table class="table">
       <thead atom-table-header class="thead-dark" [headerData]="headerData"></thead>
       <tbody atom-table-row [tableData]="tableData" [actions]="actions"></tbody>

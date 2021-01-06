@@ -28,6 +28,7 @@ import { OrganismFormComponent } from './components/organisms/organism-form.comp
 import { AtomInputNumberComponent } from './components/atoms/atom-input-number.component';
 import { AtomInputDateComponent } from './components/atoms/atom-input-date.component';
 import { PageListClientComponent } from './components/pages/page-list-client/page-list-client.component';
+import { PageAnalystClientComponent } from './components/pages/page-analyst-client/page-analyst-client.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { PageListClientComponent } from './components/pages/page-list-client/pag
     AtomInputNumberComponent,
     AtomInputDateComponent,
     PageListClientComponent,
+    PageAnalystClientComponent,
   ],
   imports: [
     BrowserModule,
