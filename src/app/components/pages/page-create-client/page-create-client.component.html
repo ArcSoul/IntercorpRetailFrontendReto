@@ -1,0 +1,17 @@
+<section class="vw-100 vh-100 d-flex justify-content-center align-items-center">
+  <div class="container">
+    <app-atom-title-text [themeColor]="'primary'">
+      {{titleProcess}}
+    </app-atom-title-text>
+    <form organism-form [inputList]="inputList" class="d-flex justify-content-center align-items-center flex-wrap">
+      <app-atom-button-click
+        class="w-100"
+        [themeColor]="'secondary'"
+        [themeColorText]="'secondary'"
+        [eventClickInput]="createClient.bind(this)"
+      >
+        Crear cliente
+      </app-atom-button-click>
+    </form>
+  </div>
+</section>
