@@ -6,6 +6,7 @@ import { InputModel } from '../../../models/input-model';
 import { ConfigCreateClient } from '../../../config/ConfigCreateClient';
 import firebase from 'firebase';
 import firestore = firebase.firestore;
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-page-create-client',
@@ -36,8 +37,7 @@ export class PageCreateClientComponent implements OnInit {
       } else if (input.id === 'edad' && typeof input.value === 'number') {
         this.clientRequest.age = input.value;
       } else if (input.id === 'fecha-de-nacimiento' && typeof input.value === 'string') {
-        const birthdate = new Date(input.value);
-        birthdate.setMinutes(birthdate.getMinutes() + birthdate.getTimezoneOffset());
+        const birthdate = moment(input.value).toDate();
         this.clientRequest.birthdate = firestore.Timestamp.fromDate(birthdate);
       }
     }
