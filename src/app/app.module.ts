@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
+import localeEs from '@angular/common/locales/es-PE';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +30,9 @@ import { AtomInputNumberComponent } from './components/atoms/atom-input-number.c
 import { AtomInputDateComponent } from './components/atoms/atom-input-date.component';
 import { PageListClientComponent } from './components/pages/page-list-client/page-list-client.component';
 import { PageAnalystClientComponent } from './components/pages/page-analyst-client/page-analyst-client.component';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
@@ -63,7 +67,9 @@ import { PageAnalystClientComponent } from './components/pages/page-analyst-clie
     AngularFireDatabaseModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue: 'es-PE'},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

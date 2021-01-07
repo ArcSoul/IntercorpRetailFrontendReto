@@ -17,6 +17,9 @@ export class PageListClientComponent implements OnInit {
   headerData: string[];
   tableData: TableModel[];
 
+  // Probabilidad de edad de muerte en Perú
+  private readonly PROBABLE_DATE_OF_DEATH = 74;
+
   constructor(
     private clientService: ClientService,
     private datePipe: DatePipe,
@@ -36,10 +39,16 @@ export class PageListClientComponent implements OnInit {
         modelData.data.push(clientModel.lastName);
         modelData.data.push(clientModel.age);
         modelData.data.push(this.datePipe.transform(clientModel.birthdate.toDate(), 'shortDate'));
+        modelData.data.push(this.datePipe.transform(this.getDeathDate(clientModel.birthdate.toDate()), 'shortDate'));
 
         return modelData;
       });
     });
+  }
+
+  getDeathDate(birthDate: Date): Date {
+    birthDate.setFullYear(birthDate.getFullYear() + this.PROBABLE_DATE_OF_DEATH);
+    return birthDate;
   }
 
 }

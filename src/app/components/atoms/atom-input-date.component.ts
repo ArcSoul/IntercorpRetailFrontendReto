@@ -25,7 +25,7 @@ export class AtomInputDateComponent implements OnInit {
   /* Variables de entrada */
   @Input() labelInput: string;
   @Input() identifierInput: string;
-  @Input() valueInput!: string;
+  @Input() valueInput!: string | number;
   @Input() inputDisabled!: boolean;
   @Output() valueInputChange: EventEmitter<string>;
 

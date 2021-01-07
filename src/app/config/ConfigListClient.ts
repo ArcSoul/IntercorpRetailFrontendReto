@@ -7,7 +7,7 @@ class DocumentosModel {
 
 const ConfigListClient: DocumentosModel = {
   title: `Lista de clientes`,
-  columns: [`Nombres`, `Apellidos`, `Edad`, `Fecha de nacimiento`],
+  columns: [`Nombres`, `Apellidos`, `Edad`, `Fecha de nacimiento`, `Fecha probable de muerte`],
 };
 
 export default ConfigListClient;

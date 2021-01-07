@@ -16,8 +16,8 @@ import {Component, Input, OnInit} from '@angular/core';
 export class AtomButtonIconComponent implements OnInit {
 
   /* Variables de entrada */
-  @Input() routerButton!: string;
-  @Input() nameIcon!: string;
+  @Input() routerButton?: string;
+  @Input() nameIcon?: string;
   @Input() visible!: boolean;
 
   constructor() {
